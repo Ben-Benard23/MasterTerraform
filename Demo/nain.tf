@@ -27,7 +27,7 @@
 #   policy = data.aws_iam_policy_document.demo_policy.json
 # }
 
-Day Two
+#Day Two
 resource "aws_iam_user" "demo" {
   name = var.aws_user_name
   path = "/system/"
@@ -35,4 +35,10 @@ resource "aws_iam_user" "demo" {
   tags = {
     tag-key = "terraform_demo_user"
   }
+}
+
+resource "aws_vpc" "migration_vpc" {
+  cidr_block = var.vpc_cider[1]
+
+  
 }
