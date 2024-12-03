@@ -37,7 +37,7 @@ resource "aws_iam_user" "demo" {
 }
 
 resource "aws_vpc" "migration_vpc" {
-  cidr_block = var.vpc_cider[1]
+  cidr_block = var.vpc_cider[0]
 
 
 }

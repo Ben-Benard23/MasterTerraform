@@ -19,7 +19,7 @@ variable "aws_user_name" {
 
 variable "vpc_cider" {
   type    = list(string)
-  default = ["10.0.0.0/24", "10.0.0.2/24", "10.0.0.3/24"]
+  default = ["10.0.0.0/24", "172.31.0.0/16", "10.0.0.3/24"]
 
 }
 variable "iam_user_tag" {
@@ -44,19 +44,19 @@ variable "ec2_instance_type" {
 }
 
 variable "instance_ami" {
-  type = string
+  type    = string
   default = "ami-0453ec754f44f9a4a"
-  
+
 }
 
 variable "enable_public_ip" {
-  type = bool
+  type    = bool
   default = true
-  
+
 }
 
 variable "availability_zone" {
-  type = list(string)
-  default = [ "us_east-1a", "us-east-1b", "us-east-1c", "us-east-1d" ]
-  
+  type    = list(string)
+  default = ["us_east-1a", "us-east-1b", "us-east-1c", "us-east-1d"]
+
 }
