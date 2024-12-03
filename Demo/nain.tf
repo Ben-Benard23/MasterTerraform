@@ -33,11 +33,21 @@ resource "aws_iam_user" "demo" {
   path = "/system/"
 
   tags = var.iam_user_tag
-  
+
 }
 
 resource "aws_vpc" "migration_vpc" {
   cidr_block = var.vpc_cider[1]
 
-  
+
+}
+
+resource "aws_instance" "simon" {
+  ami                         = var.instance_ami
+  count                       = var.count_ec2
+  instance_type               = var.ec2_instance_type[1]
+  associate_public_ip_address = var.enable_public_ip
+  availability_zone           = var.availability_zone[2]
+
+
 }
