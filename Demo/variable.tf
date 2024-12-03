@@ -22,3 +22,11 @@ variable "vpc_cider" {
   default = [ "10.0.0.0/24", "10.0.0.2/24", "10.0.0.3/24" ]
   
 }
+variable "iam_user_tag" {
+  type = map(string)
+  default = {
+    "env" = "Prod"
+    "name" = "Awa"
+  }
+  
+}

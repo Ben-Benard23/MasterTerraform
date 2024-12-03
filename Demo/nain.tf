@@ -32,9 +32,8 @@ resource "aws_iam_user" "demo" {
   name = var.aws_user_name
   path = "/system/"
 
-  tags = {
-    tag-key = "terraform_demo_user"
-  }
+  tags = var.iam_user_tag
+  
 }
 
 resource "aws_vpc" "migration_vpc" {
